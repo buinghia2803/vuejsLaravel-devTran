@@ -1,7 +1,11 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import router from "./router/index.js";
-import { Menu, List, Drawer, Button, message } from "ant-design-vue";
+
+import axios from "axios";
+window.axios = axios
+
+import { Checkbox, Input, Select, Avatar, Table, Card, Menu, List, Drawer, Button, message } from "ant-design-vue";
 
 import App from "./App.vue";
 
@@ -30,6 +34,12 @@ app.use(Menu);
 app.use(List);
 app.use(Button);
 app.use(Drawer);
+app.use(Avatar);
+app.use(Select);
+app.use(Table);
+app.use(Card);
+app.use(Input);
+app.use(Checkbox);
 app.mount("#app");
 
 app.config.globalProperties.$message = message;
